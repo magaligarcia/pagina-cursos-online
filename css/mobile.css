@@ -1,0 +1,180 @@
+@media screen and (min-width:320px) and (max-width: 640px) {
+
+    :root {
+        --blanco: #EDF6F9;
+        --crema: #FFDDD2;
+        --crema_oscuro: #E29578;
+        --verde_claro: #83C5BE;
+        --verde_oscuro: #006D77;
+        --negro: #011627;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+    }
+    
+    body {
+        margin: 0;
+        margin-bottom: 100px;
+        font-family: 'Quicksand', sans-serif;
+        background-color: var(--blanco);
+    }
+    
+    main{
+        margin: 34px;
+    }
+    
+    .boton-atras{
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    
+    .boton-atras input{
+        margin: 5px;
+        padding: 8px;
+        border-radius: 4px;
+        border: none;
+        box-shadow: 6px 6px 6px #999;
+        cursor: pointer;
+        background-color:var(--crema);
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        color:var(--crema_oscuro);
+        transform: translate(-4%, -4%);
+        transition: all 0.2s ease 0s;   
+    }
+    
+    .boton-atras input:hover{
+        background-color: var(--crema_oscuro);
+        color:var(--blanco);
+        transform: translate(0%, 0%);
+        
+    }
+    
+    .boton-atras input:active {
+        box-shadow: 2px 2px 2px var(--verde_oscuro), 0px 0px 10px 0px var(--verde_claro);
+        transform: translate(2px, 2px);
+        transition: all 0.1s ease 0s;
+    }
+    
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--verde_claro);
+        height: 80px;
+        box-shadow: 0px 4px 4px rgba(0, 109, 119, 0.6);
+    }
+    
+    .header-container h1 {
+        color: var(--verde_oscuro);
+        animation: blinker 5s linear infinite;
+    }
+         
+    @keyframes blinker {
+        50% {
+        text-shadow: -4px 4px 6px white;
+        }
+      }
+    
+    .mensaje-construccion p{
+        text-align: center;
+        font-size: medium;
+        font-weight: bold;
+        color: var(--verde_oscuro);
+    }
+    
+    
+    .header-autor-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--verde_oscuro);
+        height: 80px;
+    }
+    
+    .header-autor-container h1 {
+        color: var(--blanco);
+        text-align: center;
+        font-size: 26px;
+    }
+    
+    .main-container-index{
+    display: inline-block;
+    }
+    
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 168px);
+        /* auto-fill= cantidad de columnas, 240px= tamaño de la columna*/
+        margin-top: 20px;
+        justify-items: center;
+        gap: 26px;
+        /*Espacio entre cards*/
+        place-content: center;
+    }
+    
+    .product-card {
+        width: 140px;
+        background-color: var(--verde_claro);
+        border-radius: 10px;
+        object-fit: contain;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .product-card-nicho{
+        width: 260px;
+        background-color: var(--verde_claro);
+        border-radius: 10px;
+        object-fit: contain;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .product-card-nicho img{
+        width: 260px;
+        height: 280px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .product-card img {
+        width: 140px;
+        height: 160px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+    .product-info div p:nth-child(1) {
+        color: var(--negro);
+        font-weight: bold;
+        font-size: var(--md);
+        text-align: center;
+        margin: 0px 6px 4px 6px;
+    }
+    
+    .product-info div p:nth-child(2) {
+        font-size: var(--sm);
+        text-align: center;
+        margin: 0px 6px 4px 6px;
+        color: var(--verde_oscuro);
+    }
+    
+    .separador {
+        height: 30px;
+    }
+    
+    .separador h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--crema_oscuro);
+        font-size: 24px;
+        border-radius: 80px;
+        color: var(--crema);
+    }
+
+}
+
+@media screen and (max-width:405px){
+    main{
+        margin: 28px;
+    }
+
+}
+
